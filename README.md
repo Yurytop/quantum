@@ -1,8 +1,8 @@
 Для того, чтобы запустить локально, требуется:
-написать в консоли npm init 
-написать в консоли npm install 
-написать в консоли npm start
-Приложение задеплоено Versel: https://quantum-nine-gamma.vercel.app/
+- написать в консоли npm init 
+- написать в консоли npm install 
+- написать в консоли npm start
+- Приложение задеплоено Versel: https://quantum-nine-gamma.vercel.app/
 
 По пунктам из задания:
 ● Запуск в докере
