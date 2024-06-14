@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+**Для того, чтобы запустить локально, требуется:**
+- написать в консоли npm init 
+- написать в консоли npm install 
+- написать в консоли npm start
+- Приложение задеплоено Versel: https://quantum-nine-gamma.vercel.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **По пунктам из задания**:
+- **Запуск в докере**
+- В докере реализовать быстро не удалось, сталкунся с проблемой несовместимости win 10, поиск решения затянлуся. По этому отказался от дальнейших мучений.
 
-## Available Scripts
+- **В README файле кратко описать приложение**
+- Приложение выполнено на базовом "npx create-react-app my-app --template typescript"
+- Компонент таблице взят из MUI по рекомендации задания
+- Добавлен небольшой стиль для таблицы (синяя рамка, таблица поцентру окна)
+- Условия по самой таблицы соблюдены (функционал интерфейса)
 
-In the project directory, you can run:
+- **ВАЖНО: В README файле предоставить описание треб......**
+- так как у нас моковые данные и по факту тянуть нечего с сервера не нужно, таблица тянет сразу весь объем данных, чего на практике быть не должно (слишком тяжелый запрос).
+- по этому требования к эндпоинты могут быть 2х видов на мой взгляд.
+- 1 варинт.
+- Для конкретно это таблицы. Отдаваемый объект должен быть одним файлом, соответсвующий interface ApiTest
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 2 вариант.
+- Для правильной реализации таблицы эндпоинт должен уметь принимать на вход параметры:
+- номер страницы, количество записей на странице. и отдавать объект с заданым кол-вом записей формата interface ApiTest1
